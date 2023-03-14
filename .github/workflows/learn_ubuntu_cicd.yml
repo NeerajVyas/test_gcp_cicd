@@ -31,7 +31,19 @@ jobs:
 
       - name: List the name of files
         run: echo $(ls)
-        
+
+      - name: Authentication of AWS
+        run: echo $(ls)
+        # run: aws auth .....
+
+      - name: Copy the local plugins to s3 bucket - 
+        run: echo $(ls)
+        # run: aws s3 cp plugins/ s3:/........
+
+      - name: Copy the local dags to s3 bucket - 
+        run: echo $(ls)
+        # run: aws s3 cp dags/ s3:/........
+
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
