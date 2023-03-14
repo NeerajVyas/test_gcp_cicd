@@ -33,12 +33,19 @@ jobs:
         run: echo $(ls)
         # run: aws s3 cp plugins/ s3:/........
 
-      - name: Copy the local dags to s3 bucket - 
-        run: echo $(ls)
-        # run: aws s3 cp dags/ s3:/........
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.S3_SECRET }}
+        run: |
+        echo "$SUPER_SECRET"
 
       - name: Print bucket name action var
         run: echo "$BUCKET_NAME"
+
+
+      - name: Print bucket name action var
+        run: echo "$BUCKET_NAME"
+
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
