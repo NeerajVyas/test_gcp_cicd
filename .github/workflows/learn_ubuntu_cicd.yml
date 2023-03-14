@@ -37,10 +37,10 @@ jobs:
         run: echo $(ls)
         # run: aws s3 cp dags/ s3:/........
 
-     - name: Print bucket name 1 way
+      - name: Print bucket name 1 way
         run: echo $(BUCKET_NAME)
 
-     - name: Print bucket name 2 way
+      - name: Print bucket name 2 way
         run: echo $BUCKET_NAME
 
       # Runs a set of commands using the runners shell
