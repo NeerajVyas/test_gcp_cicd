@@ -39,20 +39,11 @@ jobs:
         run: |
           echo "$SUPER_SECRET"
 
-
       - shell: bash
         env:
           BASH_VAR: ${{ vars.BUCKET_NAME }}
         run: |
           echo "$BASH_VAR"
-
-      - name: Print bucket name action var
-        run: echo "$BUCKET_NAME"
-
-
-      - name: Print bucket name action var
-        run: echo "$BUCKET_NAME"
-
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
