@@ -37,7 +37,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.S3_SECRET }}
         run: |
-        echo "$SUPER_SECRET"
+          echo "$SUPER_SECRET"
 
       - name: Print bucket name action var
         run: echo "$BUCKET_NAME"
